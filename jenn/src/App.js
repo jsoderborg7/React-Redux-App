@@ -5,6 +5,7 @@ import './App.css';
 const App = () =>{
   return(
     <div>
+      <h1>Meet the characters of Harry Potter!</h1>
       <Characters />
     </div>
   );

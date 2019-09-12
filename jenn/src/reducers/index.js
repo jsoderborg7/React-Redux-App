@@ -6,7 +6,8 @@ const initialState = {
   house: null,
   isFetching: false,
   error: ''
-};
+  };
+
 
 export const reducer = (state = initialState, action) =>{
   switch (action.type){
@@ -17,11 +18,10 @@ export const reducer = (state = initialState, action) =>{
         error: ''
       };
     case FETCHING_CHARACTERS_SUCCESS:
+      console.log(action, "hello");
       return{
         ...state,
-        name: action.payload,
-        role: action.payload,
-        house: action.payload,
+        name: action.payload.name,
         isFetching: false
       };
     default: 

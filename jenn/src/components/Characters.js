@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {getCharacters} from '../actions';
 
-const Characters = ({getCharacters, name, role, house, isFetching, error}) =>{
+const Characters = ({getCharacters, name, isFetching, error}) =>{
   useEffect(() =>{
     getCharacters();
   }, [getCharacters]);
@@ -14,8 +14,6 @@ const Characters = ({getCharacters, name, role, house, isFetching, error}) =>{
   return(
     <div>
       <h2>Name: {name}</h2>
-      <h3>Role: {role}</h3>
-      <h3>House: {house}</h3>
     </div>
   );
 };
