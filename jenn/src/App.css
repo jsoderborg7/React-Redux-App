@@ -1,0 +1,52 @@
+.cardContainer{
+  width: 33%;
+  margin: auto;
+  margin-bottom: 3%;
+}
+
+.contentContainer{
+  width: 80%;
+  margin: auto;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background-image: url(parchment.jpg);
+  background-size: cover;
+  opacity: .8;
+  box-shadow: 0 0 5px 5px;
+}
+
+.name{
+  font-size: 2rem;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.role{
+  font-size: 1.2rem;
+  padding: 1%;
+}
+
+.house{
+  font-size: 1.5rem;
+  padding: 1%;
+}
+
+.characterContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appContainer h1{
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 3%;
+  margin-top: 0;
+  color: #2d0403;
+  background-image: url(parchment.jpg);
+  background-size: cover;
+  border-radius: 10px;
+}
