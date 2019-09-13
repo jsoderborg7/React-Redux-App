@@ -2,8 +2,6 @@ import {FETCHING_CHARACTERS_START, FETCHING_CHARACTERS_SUCCESS} from '../actions
 
 const initialState = {
   name: null,
-  role: null,
-  house: null,
   isFetching: false,
   error: ''
   };
@@ -18,10 +16,10 @@ export const reducer = (state = initialState, action) =>{
         error: ''
       };
     case FETCHING_CHARACTERS_SUCCESS:
-      console.log(action, "hello");
+      console.log(action.payload, "hello");
       return{
         ...state,
-        name: action.payload.name,
+        name: action.payload,
         isFetching: false
       };
     default: 

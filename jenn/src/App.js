@@ -4,7 +4,7 @@ import './App.css';
 
 const App = () =>{
   return(
-    <div>
+    <div className="appContainer">
       <h1>Meet the characters of Harry Potter!</h1>
       <Characters />
     </div>

@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {getCharacters} from '../actions';
+import CharacterCard from './CharacterCard';
 
 const Characters = ({getCharacters, name, isFetching, error}) =>{
   useEffect(() =>{
@@ -12,17 +13,18 @@ const Characters = ({getCharacters, name, isFetching, error}) =>{
   }
 
   return(
-    <div>
-      <h2>Name: {name}</h2>
+    <div className="characterContainer">
+        {name && name.map(item => (
+          <CharacterCard name={item.name} house={item.house} role={item.role} />
+        ))}
     </div>
   );
 };
 
 const mapStateToProps = state =>{
+  console.log('mSTP', state);
   return{
     name: state.name,
-    role: state.role,
-    house: state.house,
     isFetching: state.isFetching,
     error: state.error
   };
